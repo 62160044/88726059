@@ -34,28 +34,28 @@
     </tr>
 
     <tr>
-        <td> <label for="name">Name</label></td> 
-            <td><input type="text" name="name" id="fname"   value="First" ></td>
-            <td> &nbsp; <input type="text" name="lname" id="lname"   value="Last" >   </td>
+        <td> <label for="name">Name</label></td>
+            <td><input type="text" name="fname" id="fname"   value="First" >
+            <input type="text" name="lname" id="lname"   value="Last" >   </td>
          
     </tr>
 
     <tr>
 <td>   <label for="name">Email</label> </td>
-<td><input type="text" name="Email" id="email"    value="john@company.com"></td>
+<td><input type="text" name="email" id="email"    value="john@company.com"></td>
 
 </tr>
-<td> <label for="">Arrival</label>  </td>
-<td> <input type="date" id="start" name="arrivaldate" ></td >
-<td>&nbsp;&nbsp;&nbsp; <input type="time" id="start" name="arrivaltime" ></td>
+<td> <label for="Arrival">Arrival</label>  </td>
+<td> <input type="date" id="start" name="arrivaldate" >
+&nbsp;&nbsp;&nbsp; <input type="time" id="start" name="arrivaltime" ></td>
     
 </tr> 
 
 <tr>
 
     <td> <label for="Departure">Departure</label>  </td>
-    <td> <input type="date" id="start" name="departuredate" ></td >
-    <td>&nbsp;&nbsp;&nbsp; <input type="time" id="start" name="departuretime" ></td>
+    <td> <input type="date" id="start" name="departuredate" >
+    &nbsp;&nbsp;&nbsp; <input type="time" id="start" name="departuretime" ></td>
 
 
 
@@ -70,17 +70,34 @@
 
     
 </tr>
+<td> <label for="flightnum">Flight Number </label>  </td>
+
+    <td><input type="text" name="flightnum" id="flightnum"    value="C1209"></td>
+
 
 <tr>
-    <td>
-   
-           <center><input type="submit" value="Send">
-             <input type="reset" value="Clear"> </td> </center>
-  
-         </form></td>
-     </td>
-        </tr>
 
+
+
+</tr>
+<tr>
+    <td> <label for="Orther requests">Orther requests </label> 
+        <td>   <Textarea name="orthereq" id="orthereq" rows="5" cols="50"></Textarea><td>
+           
+
+        </td>
+    </td>
+
+
+
+</tr>
+
+<tr>
+    <td colspan="2">
+        <center>
+            <input type="submit" value="Complete Reservation">
+
+</tr>
     
 
     </table>
