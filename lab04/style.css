@@ -5,5 +5,7 @@
     background-repeat: repeat;
     padding: 20px; 
     width: 200px;
-    height: 150px;  
+    height: 40px;  
   }
+  body {
+    background-image: url("4.jpg")
