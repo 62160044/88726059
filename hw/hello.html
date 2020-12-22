@@ -8,14 +8,14 @@
 <body>
     <p>Please enter your name</p>
 
-<input type="text" id="myInput" oninput="myFunction()">
+<input type="text" id="myname" oninput="myFunction()">
 
 <p id="sawade"></p>
 
 <script>
 function myFunction() {
-  var x = document.getElementById("myInput").value;
-  document.getElementById("sawade").innerHTML = "Hello: " + x;
+  var i = document.getElementById("myname").value;
+  document.getElementById("sawade").innerHTML = "Hello: " +i ;
 }
 </script>
     
