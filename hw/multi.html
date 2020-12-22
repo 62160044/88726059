@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+ <font size="5">  คำนวณเลขกัน  </font><br>
+    
+    
+</body>
+
+<script>
+    function multi(w) {
+        div = document.getElementById('disp');
+        div.innerHTML = ""; // 
+        for (i = 1; i <= 12; i++) {
+            div.innerHTML += w + "x" + i + "=" + (w * i) + "<br>";
+        }
+    }
+    
+</script>
+    
+<input type="text" onkeyup="multi(this.value);">
+<div id="disp">result</div>
+</html>
