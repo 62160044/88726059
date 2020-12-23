@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table, th, td {
+              border: 1px solid black;
+            }
+
+            th, td {
+              padding: 10px;
+            }
+            </style>
+        <body>
+            <input type="text" id="number">
+            <button onclick="random()">Random</button>
+            <div id="disp">0000</div>
+
+        <script>
+
+
+
+        function random(){
+            num = number.value;
+            div = document.getElementById('disp');
+            div.innerHTML = ""; // 
+            for (i = 1; i <= num; i++) {
+                rn = Math.floor(Math.random() * 100);
+                div.innerHTML +=
+                    "<table>"+ 
+                        "<tr>"+
+                            "<td>"+ rn +"</td>"+
+                            "<td>"+ "00" + "</td>"
+                        "</tr>"+
+                    "</table>"+ "<br>";
+            }
+        }
+        </script>
+
+        </body>
+
+    </head>
+</html>
