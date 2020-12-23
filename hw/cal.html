@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cal</title>
     <script>
-        function sumall(){
+        function All(){
             number1 = document.getElementById('number1');
             number2 = document.getElementById('number2');
             var sum = document.getElementById('sum');
@@ -28,15 +28,16 @@
     </script>
 </head>
 <body>
-            <input type="text" placeholder="ใส่ตัวเลขที่ต้องการ" id="number1">
+            <input type="text" placeholder="mum1" id="number1">
             <td><select name="mark" id="s1">
             <option value="1" >+</option>
             <option value="2" >-</option>
             <option value="3" >*</option>
             <option value="4" >/</option>
             </select>
-            <input type="text" placeholder="ใส่ตัวเลขที่ต้องการ" id="number2"><br>
+            <input type="text" placeholder="num2" id="number2">
+            <button onclick="All()">=</button><br>
             <div id="sum"></div>
-            <button onclick="sumall()">คำนวน</button><br>
+            
 </body>
 </html>
