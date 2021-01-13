@@ -27,5 +27,6 @@ function clearform() {
     document.getElementById('addsong').value = ''
     document.getElementById('artist').value = ''
     document.getElementById('lyrics').value = ''
-    localStorage.clear();
+
   }
+  localStorage.clear();
