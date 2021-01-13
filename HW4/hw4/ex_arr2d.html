@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" class="form-control" placeholder="ชื่อเพลง" id="addsong"><br>
+    <input type="text" class="form-control" placeholder="ศิลปิน" id="artist"><br>
+    <textarea class="form-control" id="lyrics" placeholder="เนื้อเพลง" cols="30" rows="10"></textarea><br>
+    <button onclick="addsong();" class="btn btn-outline-success">Save</button><br>
+
+    <form class="form-inline" onsubmit="return search();" autocomplete="off"></form>
+    <input type="text" class="form-control" placeholder="ชื่อเพลง" id="search">
+    <button onclick="search();" class="btn btn-outline-success">ค้นหา</button>
+    </form>
+    
+    <div id="disp"></div>
+
+    <script>
+    function addsong(){
+        ls = localStorage.getItem('songs');
+        if(ls === null){
+            songs = [];
+        }else{
+            songs = JSON.parse(ls);
+        }
+            data = [
+                namesong = document.getElementById('addsong').value,
+                artist = document.getElementById('artist').value,
+                lyrics = document.getElementById('lyrics').value
+            ];
+            songs.push(data);
+        
+        console.log(songs);
+        
+        localStorage.setItem('songs',JSON.stringify(songs));
+
+    }
+        var songs = JSON.parse(localStorage.getItem("songs"))
+        if(songs == null){
+            localStorage.setItem("songs",songs)
+            songs = [];
+        }
+    
+    function nl2br(str,is_xhtml){
+        var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
+        return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g,'$1' + breakTag + '$2');
+    }
+    function search(){
+        txt = document.getElementById('search').value;
+        disp = document.getElementById('disp');
+        disp.innerHTML = "";
+        html = "";
+        cnt = 0;
+        for(i = 0;i < songs.length;i++){
+        if(songs[i][0].indexOf(txt) >= 0){
+          cnt++;
+          html += `
+          <div class="card">
+              <div class="card-body">
+              <h4 class="card-title">เพลง ${songs[i][0]}</h4>
+              <h4 class="card-title">ศิลปิน ${songs[i][1]}</h4>
+              <p class="card-text">${nl2br(songs[i][2])}</p>
+              </div>
+          </div>`;
+        }
+    }
+        if(cnt == 0){
+          disp.innerHTML = `
+          <div class="alert alert-danger">
+          <strong>ไม่พบเพลง </strong>${txt}
+          </div>`;
+        }else{
+          document.getElementById("disp").innerHTML = `
+          <div class="alert alert-success">
+            <strong>พบ</strong>${cnt} เพลง
+          </div>`;
+          document.getElementById("disp").innerHTML += html;
+        }
+        return false;
+
+    }
+    
+</script>
+</body>
+</html>

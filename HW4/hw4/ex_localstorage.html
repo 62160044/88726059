@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    fname = "Nopadol"
+    lname = "Doungrudsamee";
+
+    // save data to localStorage ด้วยเมธอด .setItem()
+    // โดยกำหนดชื่อข้อมูลเป็น firstName และ lastName
+    localStorage.setItem("firstName", fname);
+    localStorage.setItem("lastName", lname);
+
+    // check data stored in localStorage by
+    // right click and select inspect, Application, Local Storage, file://
+    // you will see key -> firstName, Value-> wittawas
+    // you will see key -> lastName, Value-> puntumchinda
+
+    // retrieve value from localStorage ด้วยเมธอด .getItem()
+    // ถ้าชื่อข้อมูลที่ต้องการยังไม่มีใน localStorage จะได้ค่า null กลับมา
+    fullName = localStorage.getItem("firstName") + " " +
+        localStorage.getItem("lastName");
+
+    document.write(fullName);
+</script>
+</body>
+</html>

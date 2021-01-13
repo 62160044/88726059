@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Create array
+    arr2d = [
+        [1001, 'Wittawas'],
+        [1002, 'Drasi'],
+        [1003,'ggggg'],
+        [1004,'ffff']
+    ];
+    console.log(arr2d);
+    document.write("<hr>จำนวน element ของอะเรย์ = " + arr2d.length);
+
+    //convert array to JSON string
+    str = JSON.stringify(arr2d);
+    console.log(str);
+
+    document.write("<p>แปลงอะเรย์ให้เป็น JSON string ได้ดังนี้</p>");
+    document.write(str);
+
+    document.write("<h4>" + str + "</h4>");
+
+    txt = "Wit";
+    document.write("Found 'bro' at position " + str.indexOf(txt) + "<hr>");
+
+    txt = "The";
+    document.write("Found 'The' at position " + str.indexOf(txt) + "<hr>");
+
+    txt = "Witty";
+    document.write("Not Found 'Witty' and the position is " + str.indexOf(txt) + "<hr>");
+
+    // แปลง JSON string กลับเป็นอะเรย์
+    newArr2d = JSON.parse(str);
+    console.log(newArr2d);
+    document.write("<hr>จำนวน element ของอะเรย์ newArr2d = " + newArr2d.length);
+    
+    arr2d = [];     
+        arr2d.push(namesong,artist,lyrics);
+        console.log(arr2d);
+        
+        for ( i = 0; i < arr2d.length;i++){
+            localStorage.setItem(i,infor);
+        }
+
+</script>
+</body>
+</html>

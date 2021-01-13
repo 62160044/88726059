@@ -1,0 +1,30 @@
+<script>
+    // สร้างตัวแปรอะเรย์ arr2d
+    arr2d = [];
+
+    // สร้างตัวแปรอะเรย์ data
+    data = [1001, 'Wittawas'];
+
+    // เพิ่มอะเรย์ data เข้าไปในอะเรย์ arr2d 
+    arr2d.push(data);
+
+    data = [1002, 'Drasi'];
+    arr2d.push(data);
+    data = [1003, 'Drasiiiiii'];
+    arr2d.push(data);
+
+    // ดูค่าของตัวแปร 
+    // คลิกเม้าส์ขวาเลือก inspect, Console เพื่อดูค่าของตัวแปร
+    console.log(arr2d);
+    console.log(data);
+
+    // พิมพ์ตัวแปรอะเรย์ arr2d ที่ browser
+    document.write(arr2d);
+
+    // loop พิมพ์ค่าของตัวแปร array
+    html = "<hr>";
+    for (i = 0; i < arr2d.length; i++) {
+        html += arr2d[i][0] + "-" + arr2d[i][1] + "<br>";
+    }
+    document.write(html);
+</script>
