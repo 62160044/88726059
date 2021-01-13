@@ -2,6 +2,7 @@
     if(songs == null){ 
       localStorage.setItem("songs",songs)
       songs = [];
+
     }
     
     function nl2br(str,is_xhtml){
@@ -29,13 +30,13 @@
     }
         if(cnt == 0){
           disp.innerHTML = `
-          <div class="alert alert-danger">
+          <div class="alert ">
           <strong>ไม่พบเพลง </strong>${txt}
           </div>`;
         }else{
           document.getElementById("disp").innerHTML = `
-          <div class="alert alert-success">
-            <strong>พบ </strong>${cnt} เพลง
+          <div class="alert ">
+            <strong>พบ </strong>${cnt} เพลง ! ! !
           </div>`;
           document.getElementById("disp").innerHTML += html;
         }
